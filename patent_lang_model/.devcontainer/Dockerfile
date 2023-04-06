@@ -4,6 +4,13 @@ WORKDIR /app
 
 COPY . /app/
 
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN pip install -r /app/requirements.txt
 
 EXPOSE 8501

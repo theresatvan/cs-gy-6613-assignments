@@ -9,6 +9,9 @@ app_file: app.py
 pinned: false
 ---
 
+## Hugging 🤗 Face Space
+<https://huggingface.co/spaces/theresatvan/patent-language-model>
+
 ## Containerization setup
 We use Docker for containerization. Since we are building a Streamlit application, we can expect to be developing solely in Python. The Docker base image we are building our container from is `python:3.10-slim`.
 
