@@ -3,6 +3,15 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
+    "name": "PyTorch DevContainer",
+    "runArgs": [
+        "--gpus=all",
+        "--shm-size=16gb",
+        "--ipc=host"
+    ],
+    "mounts": [
+        "source=${localEnv:USERPROFILE}/Desktop/workspace/NYU/Artificial Intelligence/cs-gy-6613-assignments/patent_lang_model,target=/app,type=bind,consistency=cached"
+    ],
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
     "workspaceFolder": "/workspace",
     "postStartCommand": "echo 'Docker container started...'"
